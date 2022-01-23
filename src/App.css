@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #222222;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 218.88px); 
+    border-radius: 0 0 16px 16px;
+}
+
+h1, p {
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 325px) { 
+    h1 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+a {
+    position: relative;
+    color: #35BDB9;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+a::before {
+  position: absolute;
+  content: attr(data-content);
+  width: 0;
+  color: #FFDB58;
+  text-decoration: underline;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: width 300ms ease;
+}
+a:hover::before {
+  width: 100%;
+}
+
+.refresh-btn {
+    font-size: 1.5rem;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 16px 16px 0 0;
+    border: none;
+    margin: auto;
+    width: 100%;
+    transition: 300ms ease;
+    color: black;
+}
+
+.refresh-btn:hover, .refresh-btn:focus {
+  transition: 300ms ease;
+  background: #35BDB9;
+  color: white;
+  cursor: pointer;   
+  outline: none !important;
+}
+
+.bottom-stats {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -100px;
+    user-select: none;
+    pointer-events: none;
+}
